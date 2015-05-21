@@ -1,0 +1,163 @@
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.TitledBorder;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
+
+
+public class LazyBoyRecipes1 extends JFrame {
+  private static final int FRAME_WIDTH = 960;
+  private static final int FRAME_HEIGHT = 980;
+  
+  private JButton submitButton;
+  private JLabel title;
+  
+  private JCheckBox bakingPowderCheckBox;
+  private JCheckBox bakingSodaCheckBox;
+  private JCheckBox butterCheckBox;
+  private JCheckBox buttermilkCheckBox;
+  private JCheckBox carrotsCheckBox;
+  private JCheckBox cheeseCheckBox;
+  private JCheckBox cornSyrupCheckBox;
+  private JCheckBox eggsCheckBox;
+  private JCheckBox flourCheckBox;
+  private JCheckBox garlicPowderCheckBox;
+  private JCheckBox groundBeefCheckBox;
+  private JCheckBox kirschwasserFruitBrandyCheckBox;
+  private JCheckBox margarineCheckBox;
+  private JCheckBox milkCheckBox;
+  private JCheckBox oliveOilCheckBox;
+  private JCheckBox onionCheckBox;
+  private JCheckBox peanutButterCheckBox;
+  private JCheckBox pecansCheckBox;
+  private JCheckBox pepperCheckBox;
+  private JCheckBox powderedSugarCheckBox;
+  private JCheckBox salsaCheckBox;
+  private JCheckBox saltCheckBox;
+  private JCheckBox shorteningCheckBox;
+  private JCheckBox strawberriesCheckBox;
+  private JCheckBox sugarCheckBox;
+  private JCheckBox vanillaExtractCheckBox;
+  private JCheckBox vanillaIceCreamCheckBox;
+  private JCheckBox vegetableOilCheckBox;
+  private JCheckBox waterCheckBox;
+  private JCheckBox whiteCakeMixCheckBox;
+  private JCheckBox yeastCheckBox;
+
+  
+  public LazyBoyRecipes1() {
+    setSize(FRAME_WIDTH, FRAME_HEIGHT);
+    
+//    JPanel titlePanel = new JPanel();
+//    title = new JLabel("Lazy Boy Recipes");
+//    setTitleFont();
+//    
+//    public void setTitleFont(){
+//      int size = 0;
+//      final int MEDIUM_SIZE = 36;
+//      size = MEDIUM_SIZE;
+//      titlePanel.setFont(new Font(size));
+//    }
+    
+    
+    JPanel imagePanel = new JPanel();
+    
+    JPanel instrPanel = new JPanel();
+    instrPanel.setLayout(new GridLayout(3, 1));
+    instrPanel.setBorder(new TitledBorder(new EtchedBorder(), "INSTRUCTIONS"));
+    instrPanel.add(new JLabel("Now, for all you lazy people out there, just like me, who don't want to go to the store to buy ingredients, use Lazy Boy Recipes.  So here's the deal, check the boxes "));
+    instrPanel.add(new JLabel("in the list below for the ingredients that you have.  Depending on what you have, this program will return recipes for what you have.  Happy Eating!"));
+    
+    bakingPowderCheckBox = new JCheckBox("Baking Powder");
+    bakingSodaCheckBox = new JCheckBox("Baking Soda");
+    butterCheckBox = new JCheckBox("Butter");
+    buttermilkCheckBox = new JCheckBox("Buttermilk");
+    carrotsCheckBox = new JCheckBox("Carrots");
+    cheeseCheckBox = new JCheckBox("Cheese");
+    cornSyrupCheckBox = new JCheckBox("Corn Syrup");
+    eggsCheckBox = new JCheckBox("Eggs");
+    flourCheckBox = new JCheckBox("Flour");
+    garlicPowderCheckBox = new JCheckBox("Garlic Powder");
+    groundBeefCheckBox = new JCheckBox("Ground Beef");
+    kirschwasserFruitBrandyCheckBox = new JCheckBox("Kirschwasser Fruit Brandy");
+    margarineCheckBox = new JCheckBox("Margarine");
+    milkCheckBox = new JCheckBox("Milk");
+    oliveOilCheckBox = new JCheckBox("Olive Oil");
+    onionCheckBox = new JCheckBox("Onion");
+    peanutButterCheckBox = new JCheckBox("Peanut Butter");
+    pecansCheckBox = new JCheckBox("Pecans");
+    pepperCheckBox = new JCheckBox("Pepper");
+    powderedSugarCheckBox = new JCheckBox("Powdered Sugar");
+    salsaCheckBox = new JCheckBox("Salsa");
+    saltCheckBox = new JCheckBox("Salt");
+    shorteningCheckBox = new JCheckBox("Shortening");
+    strawberriesCheckBox = new JCheckBox("Strawberries");
+    sugarCheckBox = new JCheckBox("Sugar");
+    vanillaExtractCheckBox = new JCheckBox("Vanilla Extract");
+    vanillaIceCreamCheckBox = new JCheckBox("Vanilla Ice Cream");
+    vegetableOilCheckBox = new JCheckBox("Vegetable Oil");
+    waterCheckBox = new JCheckBox("Water");
+    whiteCakeMixCheckBox = new JCheckBox("White Cake Mix");
+    yeastCheckBox = new JCheckBox("Yeast");
+    
+    JPanel checkBoxPanel = new JPanel();
+    checkBoxPanel.setLayout(new GridLayout(31, 1));
+    checkBoxPanel.setBorder(new TitledBorder(new EtchedBorder(), "INGREDIENTS"));
+    
+    checkBoxPanel.add(bakingPowderCheckBox);
+    checkBoxPanel.add(bakingSodaCheckBox);
+    checkBoxPanel.add(butterCheckBox);
+    checkBoxPanel.add(buttermilkCheckBox);
+    checkBoxPanel.add(carrotsCheckBox);
+    checkBoxPanel.add(cheeseCheckBox);
+    checkBoxPanel.add(cornSyrupCheckBox);
+    checkBoxPanel.add(eggsCheckBox);
+    checkBoxPanel.add(flourCheckBox);
+    checkBoxPanel.add(garlicPowderCheckBox);
+    checkBoxPanel.add(groundBeefCheckBox);
+    checkBoxPanel.add(kirschwasserFruitBrandyCheckBox);
+    checkBoxPanel.add(margarineCheckBox);
+    checkBoxPanel.add(milkCheckBox);
+    checkBoxPanel.add(oliveOilCheckBox);
+    checkBoxPanel.add(onionCheckBox);
+    checkBoxPanel.add(peanutButterCheckBox);
+    checkBoxPanel.add(pecansCheckBox);
+    checkBoxPanel.add(pepperCheckBox);
+    checkBoxPanel.add(powderedSugarCheckBox);
+    checkBoxPanel.add(salsaCheckBox);
+    checkBoxPanel.add(saltCheckBox);
+    checkBoxPanel.add(shorteningCheckBox);
+    checkBoxPanel.add(strawberriesCheckBox);
+    checkBoxPanel.add(sugarCheckBox);
+    checkBoxPanel.add(vanillaExtractCheckBox);
+    checkBoxPanel.add(vanillaIceCreamCheckBox);
+    checkBoxPanel.add(vegetableOilCheckBox);
+    checkBoxPanel.add(waterCheckBox);
+    checkBoxPanel.add(whiteCakeMixCheckBox);
+    checkBoxPanel.add(yeastCheckBox);
+     
+    JPanel submitPanel = new JPanel();
+    submitButton = new JButton("Submit");
+    submitPanel.setBorder(new TitledBorder(new EtchedBorder(), "Submit"));
+    submitPanel.add(submitButton);
+    
+    JPanel northPanel = new JPanel();
+    northPanel.setLayout(new GridLayout(3, 1));
+//    northPanel.add(titlePanel);
+    northPanel.add(imagePanel);
+    northPanel.add(instrPanel);
+    
+    add(instrPanel, BorderLayout.NORTH);
+    add(checkBoxPanel, BorderLayout.CENTER);
+    add(submitPanel, BorderLayout.SOUTH);
+  }
+}
