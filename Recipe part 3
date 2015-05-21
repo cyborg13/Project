@@ -1,0 +1,10 @@
+import javax.swing.JFrame;
+
+public class LazyBoyRecipesViewer{
+  public static void main(String[] args){
+    JFrame frame = new LazyBoyRecipes();
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setTitle("Lazy Boy Recipes");
+    frame.setVisible(true);
+  }
+}
