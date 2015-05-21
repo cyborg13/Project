@@ -1,0 +1,48 @@
+import java.util.Date;
+import java.util.*;
+import java.text.*;
+import java.util.Scanner;
+import java.util.Calendar;
+
+
+public class DateDemo {
+
+  public static void main(String args[]) {
+     Calendar now = Calendar.getInstance ();
+     Date date = new Date();
+     String str = String.format("Current Date/Time : %tc", date );
+     System.out.printf(str);
+     System.out.println(" Enter Your Birthday:");
+     Scanner keyboard = new Scanner(System.in);
+     int year;
+     int month;
+     int day;
+     System.out.print("Year: ");
+     year = keyboard.nextInt();
+     System.out.print("Month: ");
+     month = keyboard.nextInt();
+     System.out.print("Day: ");
+     day = keyboard.nextInt();
+     int yearAge = (now.get(Calendar.YEAR)) - year - 1;
+     int monthAge = (now.get(Calendar.MONTH)) - month;
+     int dayAge = (now.get(Calendar.DATE)) - day;
+     int hourAge = (yearAge * 8766) + (monthAge * 730) + (dayAge * 24);
+     int minuteAge = (yearAge * 525949) + (monthAge * 43829) + (dayAge * 1440);
+     int secondAge = (yearAge * 31536000) + (monthAge * 2592000) + (dayAge * 86400);
+     if(monthAge < 0){
+         year --;
+         monthAge += 12;
+      } 
+     if(dayAge < 0){
+       
+         year --;
+         dayAge += 30;
+         
+       System.out.println(yearAge + " years " + monthAge + " months and " + dayAge + " days old. " );
+       System.out.println(hourAge + "Hours Old");
+       System.out.println(minuteAge + "Minutes Old");
+       System.out.println(secondAge + "Seconds Old");
+       
+  }
+}
+}
